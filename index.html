@@ -1000,15 +1000,15 @@
           await audio.play();
           btn.classList.add("playing");
           btn.setAttribute("aria-pressed", "true");
-          label.textContent = "Әуен ойнап тұр";
+          label.textContent = "Қосулы";
         } else {
           audio.pause();
           btn.classList.remove("playing");
           btn.setAttribute("aria-pressed", "false");
-          label.textContent = "Әуенді тыңдау";
+          label.textContent = "Әуен";
         }
       } catch (e) {
-        label.textContent = "Әуен файлы табылмады";
+        label.textContent = "Әуен жүктеліп жатыр...";
       }
     });
   </script>
