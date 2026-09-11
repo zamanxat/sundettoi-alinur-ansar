@@ -220,8 +220,9 @@
         text-transform: uppercase;
       }
       .hero-arrow i {
-        width: 1px;
-        height: 34px;
+        width: 10px;
+        border-radius: 20px;
+        height: 44px;
         background: linear-gradient(var(--gold), transparent);
       }
       .photo-section {
@@ -804,8 +805,8 @@
           ><span>2026</span>
         </div>
         <div class="eyebrow reveal">Сүндет тойға шақыру</div>
-        <h1 class="reveal delay-1">
-          Лашын <em>мен</em> Алинур<br /><em>және</em> Аңсар
+        <h1 class="reveal delay-1" style="font-size: 44px;">
+          <div class="row-name" style="display: flex;">Лашын, Алинур</div> <em style="font-size: 24px; ">және</em> Аңсар
         </h1>
         <p class="hero-subtitle reveal delay-2">
           Құрметті ағайын-туыс, бауырлар,<br />құда-жекжат, дос-жарандар!
@@ -866,20 +867,19 @@
         <h2>Ұлы жібек жолы</h2>
         <div class="venue-sub">салтанат сарайы</div>
         <p class="venue-address">
-          Түркістан облысы<br />Қадірлі қонақтар, ыңғайлы көру үшін сайтты ұялы
-          телефоныңыздан ашуыңызды сұраймыз.
+          Түркістан облысы
         </p>
         <a
           class="map-button"
           href="https://2gis.kz/kz_turkistan_oblast_rwop/geo/70030076442104503/69.341524,41.497484"
           target="_blank"
           rel="noreferrer"
-          >⌖&nbsp; Картаға өту &nbsp;↗</a
+          ><img src="images/2gis.png" alt="2gis" style="width: 30px; height: 30px; border-radius: 10px;">&nbsp; Картаға өту &nbsp;</a
         >
       </section>
       <section class="rsvp" id="rsvp">
         <h2>Қуанышымыздың<br /><em>қонағы болыңыздар</em></h2>
-        <p>Тойға келуіңізді алдын ала растауыңызды сұраймыз.</p>
+        <p id="formadek">Тойға келуіңізді алдын ала растауыңызды сұраймыз.</p>
         <form class="rsvp-form" id="rsvp-form">
           <label class="rsvp-label" for="guest-name"
             >Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімін бірге
@@ -900,7 +900,7 @@
                 value="Келемін"
                 required
               /><span>Келемін</span></label
-            ><label class="rsvp-option"
+            ><label class="rsvp-option"f
               ><input
                 type="radio"
                 name="attendance"
@@ -919,7 +919,7 @@
           </div>
           <button class="submit-rsvp" type="submit">Жіберу</button>
         </form>
-        <div class="rsvp-note" id="rsvp-note"></div>
+        <!-- <div class="rsvp-note" id="rsvp-note"></div> -->
         <div class="rsvp-success" id="rsvp-success"></div>
         <button class="reset-rsvp" id="reset-rsvp" type="button">
           Форманы қайта толтыру
@@ -927,7 +927,7 @@
       </section>
       <section class="hosts">
         <div class="section-kicker">Той иелері</div>
-        <h2>Серік — Ботагөз</h2>
+        <h2 style="font-size: 36px;">Серік - Ботакөз</h2>
         <p>Ізгі ниетпен, той иелері</p>
         <div class="host-names">Қуанышымызға ортақ болыңыздар</div>
       </section>
@@ -936,7 +936,7 @@
       </footer>
     </div>
     <button class="music" id="music" aria-pressed="false">
-      <span class="music-disc" id="disc">▶</span
+      <span class="music-disc" id="disc"><img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;"></span
       ><span id="music-label">Әуен</span
       ><span class="bars"><i></i><i></i><i></i></span>
     </button>
@@ -967,6 +967,7 @@
       const rsvpNote = document.getElementById("rsvp-note");
       const rsvpSuccess = document.getElementById("rsvp-success");
       const resetRsvp = document.getElementById("reset-rsvp");
+      const submitRsvp = rsvpForm.querySelector(".submit-rsvp");
       function getSavedResponse() {
         return JSON.parse(localStorage.getItem("toi-rsvp-submitted") || "null");
       }
@@ -984,6 +985,8 @@
         localStorage.removeItem("toi-rsvp-submitted");
         rsvpForm.reset();
         rsvpForm.style.display = "block";
+        submitRsvp.disabled = false;
+        submitRsvp.textContent = "Жіберу";
         rsvpSuccess.classList.remove("visible");
         resetRsvp.classList.remove("visible");
         rsvpNote.textContent = "";
@@ -1014,21 +1017,37 @@
           name,
           attendance: attendance.value,
         };
-        localStorage.setItem("toi-rsvp-submitted", JSON.stringify(response));
-        if (RSVP_ENDPOINT) {
-          try {
-            await fetch(RSVP_ENDPOINT, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(response),
-              mode: "no-cors",
+        
+        submitRsvp.disabled = true;
+        submitRsvp.textContent = "Жіберілуде…";
+        try {
+          if (RSVP_ENDPOINT) {
+            const payload = new Blob([JSON.stringify(response)], {
+              type: "text/plain;charset=UTF-8",
             });
-          } catch (_) {}
+            if (!navigator.sendBeacon(RSVP_ENDPOINT, payload)) {
+              fetch(RSVP_ENDPOINT, {
+                method: "POST",
+                body: payload,
+                mode: "no-cors",
+                keepalive: true,
+              }).catch(() => {});
+            }
+          }
+          const formadeki = document.getElementById("formadek");
+          localStorage.setItem("toi-rsvp-submitted", JSON.stringify(response));
+          submitRsvp.textContent = "Жіберілді ✓";
+          // rsvpNote.textContent = "Жауабыңыз сақталды, Рақмет!";
+          formadeki.textContent = "Жауабыңыз сақталды, Рақмет!";
+          
+
+          showSavedResponse(response);
+        } catch (_) {
+          submitRsvp.textContent = "Жіберілді ✓";
+          rsvpNote.textContent = "Жауабыңыз қабылданды.";
+          showSavedResponse(response);
         }
-        rsvpNote.textContent = "Жауабыңыз Excel кестесіне жіберілді.";
-        showSavedResponse(response);
       });
-      exportRsvp.onclick = exportResponses;
       let ctx = null,
         timer = null,
         playing = false,
@@ -1050,11 +1069,16 @@
       }
       async function start() {
         if (MUSIC_URL) {
-          audio ??= new Audio(MUSIC_URL);
-          audio.loop = true;
-          audio.volume = 0.7;
-          await audio.play();
-        } else {
+          try {
+            audio ??= new Audio(encodeURI(MUSIC_URL));
+            audio.loop = true;
+            audio.volume = 0.7;
+            await audio.play();
+          } catch (_) {
+            audio = null;
+          }
+        }
+        if (!audio) {
           const C = window.AudioContext || window.webkitAudioContext;
           if (!C) return;
           ctx ??= new C();
@@ -1066,7 +1090,7 @@
         playing = true;
         document.getElementById("music").classList.add("on");
         document.getElementById("music").setAttribute("aria-pressed", "true");
-        document.getElementById("disc").textContent = "Ⅱ";
+        document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
         document.getElementById("music-label").textContent = "Әуен қосулы";
       }
       function stop() {
@@ -1076,7 +1100,7 @@
         playing = false;
         document.getElementById("music").classList.remove("on");
         document.getElementById("music").setAttribute("aria-pressed", "false");
-        document.getElementById("disc").textContent = "▶";
+        document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
         document.getElementById("music-label").textContent = "Әуен";
       }
       document.getElementById("music").onclick = () =>
