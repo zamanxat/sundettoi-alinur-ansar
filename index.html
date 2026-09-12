@@ -1078,12 +1078,12 @@
       if (playing) {
         musicButton.classList.add("on");
         musicButton.setAttribute("aria-pressed", "true");
-        disc.textContent = "Ⅱ";
+        disc.innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
         label.textContent = "Әуен қосулы";
       } else {
         musicButton.classList.remove("on");
         musicButton.setAttribute("aria-pressed", "false");
-        disc.textContent = "▶";
+        disc.innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
         label.textContent = "Әуен";
       }
     }
