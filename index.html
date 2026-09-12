@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#244736" />
-  <title>Лашын, Алинур және Аңсар — сүндет тойы</title>
+  <title>Лашын, Алинур және Аңсар — сүндет тойына шақырту | Серік - Ботакөз</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
 
@@ -936,7 +936,7 @@
         <div><small>қазан</small><b>2026</b></div>
         <i></i><span>19:00</span>
       </div>
-      <a class="hero-arrow" href="#story">төмен сырғытыңыз<i></i></a>
+      <a class="hero-arrow" href="#story">төмен сырғытыңыз<i></i><svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -10px;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg></a>
     </section>
     <section id="story" class="photo-section">
       <div class="photo-card">
@@ -960,12 +960,23 @@
       </p>
       <div class="event-grid">
         <div class="event-card">
-          <div class="icon">◷</div>
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-clock">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
           <h3>31 қазан</h3>
           <p>Сенбі, 2026 жыл<br />Тойдың басталуы 19:00</p>
         </div>
         <div class="event-card">
-          <div class="icon">✦</div>
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-leaf">
+              <path
+                d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" />
+              <path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" />
+            </svg></div>
           <h3>Қазан</h3>
           <p>Күздің ең шуақты<br />кешінде бас қосамыз</p>
         </div>
@@ -1012,7 +1023,13 @@
         <button class="submit-rsvp" type="submit">Жіберу</button>
       </form>
       <!-- <div class="rsvp-note" id="rsvp-note"></div> -->
-      <div class="rsvp-success" id="rsvp-success"></div>
+      <div class="rsvp-success" id="rsvp-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="lucide lucide-circle-user-round">
+          <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+          <circle cx="12" cy="11" r="4" />
+          <circle cx="12" cy="12" r="10" />
+        </svg></div>
       <button class="reset-rsvp" id="reset-rsvp" type="button">
         Форманы қайта толтыру
       </button>
@@ -1023,8 +1040,8 @@
       <p>Ізгі ниетпен, той иелері</p>
       <div class="host-names">Қуанышымызға ортақ болыңыздар</div>
     </section>
-    <footer class="footer">
-      <span>СҮНДЕТ ТОЙ · 31.10.2026</span><span>ЖАСАҒАН <b>JOBALAB</b></span>
+    <footer class="footer" style="display: flex;">
+      <span>СҮНДЕТ ТОЙ · 31.10.2026</span><span>ЖАСАҒАН <b>JOBALAB</b><svg style="margin-left: 5px; margin-bottom:-2px;" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-complex"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span>
     </footer>
   </div>
   <button class="music" id="music" aria-pressed="false">
@@ -1157,11 +1174,18 @@
 
     function showSavedResponse(response) {
       rsvpForm.style.display = "none";
+
       rsvpSuccess.innerHTML =
-        "<b>Жауабыңыз қабылданды!</b>" +
-        response.name +
-        "<br>" +
-        response.attendance;
+        "<b>Жауабыңыз қабылданды!</b><br>" +
+        '<div style="display: flex; align-items: center; gap: 8px; margin-top: -10px; justify-content:center;">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round"><path d="M17.925 20.056a6 6 0 0 0-11.851.001"/><circle cx="12" cy="11" r="4"/><circle cx="12" cy="12" r="10"/></svg>' +
+        `<span>${response.name}</span>` +
+        '</div>' +
+        '<div style="display: flex; align-items: center; gap: 8px; margin-top: 5px; justify-content:center;">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>' +
+        `<span>${response.attendance}</span>` +
+        '</div>';
+
       rsvpSuccess.classList.add("visible");
       resetRsvp.classList.add("visible");
     }
