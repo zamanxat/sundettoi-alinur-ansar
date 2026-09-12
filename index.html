@@ -1,299 +1,337 @@
 <!doctype html>
 <html lang="kk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <meta name="theme-color" content="#244736" />
-    <title>Лашын, Алинур және Аңсар — сүндет тойы</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
-      :root {
-        --green: #244736;
-        --deep: #163528;
-        --olive: #9aae86;
-        --sage: #dfe7d2;
-        --cream: #f5f1e7;
-        --paper: #fbfaf5;
-        --ink: #2c342d;
-        --muted: #778078;
-        --line: #c6d1bd;
-        --gold: #b18a4e;
-        --serif: "DM Serif Display", Georgia, serif;
-        --sans: "Manrope", "DM Sans", Arial, sans-serif;
-        --ease: cubic-bezier(0.2, 0.9, 0.25, 1);
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#244736" />
+  <title>Лашын, Алинур және Аңсар — сүндет тойы</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
+
+    :root {
+      --green: #244736;
+      --deep: #163528;
+      --olive: #9aae86;
+      --sage: #dfe7d2;
+      --cream: #f5f1e7;
+      --paper: #fbfaf5;
+      --ink: #2c342d;
+      --muted: #778078;
+      --line: #c6d1bd;
+      --gold: #b18a4e;
+      --serif: "DM Serif Display", Georgia, serif;
+      --sans: "Manrope", "DM Sans", Arial, sans-serif;
+      --ease: cubic-bezier(0.2, 0.9, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #d7ded1;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .site {
+      width: min(100%, 720px);
+      margin: auto;
+      background: var(--paper);
+      overflow: hidden;
+      box-shadow: 0 0 50px #203d2a20;
+    }
+
+    .reveal {
+      animation: reveal 0.9s var(--ease) both;
+    }
+
+    .delay-1 {
+      animation-delay: 0.14s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.28s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.42s;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      * {
-        box-sizing: border-box;
+
+      to {
+        opacity: 1;
+        transform: none;
       }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: #d7ded1;
-        color: var(--ink);
-        font-family: var(--sans);
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      button {
-        font: inherit;
-        cursor: pointer;
-      }
-      .site {
-        width: min(100%, 720px);
-        margin: auto;
-        background: var(--paper);
-        overflow: hidden;
-        box-shadow: 0 0 50px #203d2a20;
-      }
-      .reveal {
-        animation: reveal 0.9s var(--ease) both;
-      }
-      .delay-1 {
-        animation-delay: 0.14s;
-      }
-      .delay-2 {
-        animation-delay: 0.28s;
-      }
-      .delay-3 {
-        animation-delay: 0.42s;
-      }
-      @keyframes reveal {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      .hero {
-        position: relative;
-        min-height: 790px;
-        padding: 34px 28px 45px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-        background: var(--cream);
-      }
-      .hero:before {
-        content: "";
-        position: absolute;
-        width: 460px;
-        height: 460px;
-        top: -230px;
-        left: -260px;
-        border-radius: 50%;
-        border: 1px solid #b18a4e33;
-        box-shadow:
-          0 0 0 28px #b18a4e0c,
-          0 0 0 56px #b18a4e08;
-      }
-      .hero:after {
-        content: "";
-        position: absolute;
-        right: -190px;
-        bottom: 100px;
-        width: 390px;
-        height: 390px;
-        border: 1px solid #9aae8640;
-        border-radius: 50%;
-      }
-      .brand {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        max-width: 520px;
-        color: var(--muted);
-        font-size: 10px;
-        letter-spacing: 0.19em;
-        text-transform: uppercase;
-      }
-      .brand:after {
-        content: "";
-        height: 1px;
-        flex: 1;
-        background: linear-gradient(90deg, var(--line), transparent);
-      }
-      .brand-mark {
-        display: grid;
-        width: 27px;
-        height: 27px;
-        place-items: center;
-        border: 1px solid var(--gold);
-        border-radius: 50%;
-        color: var(--gold);
-        font: italic 19px var(--serif);
-        letter-spacing: 0;
-      }
-      .eyebrow {
-        position: relative;
-        z-index: 1;
-        margin: 72px 0 16px;
-        color: var(--green);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-      }
-      .hero h1 {
-        position: relative;
-        z-index: 1;
-        margin: 0;
-        color: var(--green);
-        font: 400 clamp(58px, 16vw, 104px)/0.84 var(--serif);
-        letter-spacing: -0.045em;
-      }
-      .hero h1 em {
-        display: block;
-        margin: 14px 0 12px;
-        color: var(--gold);
-        font-size: 0.29em;
-        letter-spacing: 0.04em;
-      }
-      .hero-subtitle {
-        position: relative;
-        z-index: 1;
-        margin: 28px 0 0;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.65;
-      }
-      .hero-date {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        gap: 13px;
-        margin: 29px 0 0;
-        padding: 11px 20px;
-        border-top: 1px solid var(--gold);
-        border-bottom: 1px solid var(--gold);
-        color: var(--green);
-      }
-      .hero-date strong {
-        font: 400 34px var(--serif);
-      }
-      .hero-date small {
-        display: block;
-        color: var(--gold);
-        font: italic 18px var(--serif);
-      }
-      .hero-date b {
-        display: block;
-        font-size: 10px;
-        letter-spacing: 0.2em;
-      }
-      .hero-date i {
-        height: 32px;
-        border-left: 1px solid var(--gold);
-        opacity: 0.7;
-      }
-      .hero-date span {
-        font: 600 15px var(--serif);
-        letter-spacing: 0.08em;
-      }
-      .hero-arrow {
-        position: absolute;
-        z-index: 1;
-        bottom: 26px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        color: var(--muted);
-        font-size: 9px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-      .hero-arrow i {
-        width: 10px;
-        border-radius: 20px;
-        height: 44px;
-        background: linear-gradient(var(--gold), transparent);
-      }
-      .photo-section {
-        padding: 0 20px 58px;
-        background: var(--cream);
-      }
-      .photo-card {
-        position: relative;
-        height: 530px;
-        overflow: hidden;
-        border-radius: 180px 180px 6px 6px;
-        background: var(--sage);
-      }
-      .photo-card:before {
-        content: "";
-        position: absolute;
-        inset: 9px;
-        z-index: 2;
-        border: 1px solid #fff9;
-        border-radius: 174px 174px 4px 4px;
-        pointer-events: none;
-      }
-      .photo-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        filter: saturate(0.82);
-        transition: transform 1s var(--ease);
-      }
-      .photo-card:hover img {
-        transform: scale(1.04);
-      }
-      .photo-tag {
-        position: absolute;
-        z-index: 3;
-        bottom: 22px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 8px 15px;
-        border: 1px solid #fff8;
-        border-radius: 30px;
-        background: #244736df;
-        color: #f5f1e7;
-        font-size: 10px;
-        letter-spacing: 0.16em;
-        white-space: nowrap;
-        text-transform: uppercase;
-      }
-      .photo-caption {
-        max-width: 460px;
-        margin: 27px auto 0;
-        text-align: center;
-      }
-      .photo-caption h2 {
-        margin: 0;
-        color: var(--green);
-        font: 400 36px/1.05 var(--serif);
-      }
-      .photo-caption p {
-        margin: 13px auto 0;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.7;
-      }
-      .wave {
-        height: 58px;
-        margin-top: -1px;
-        background: var(--cream);
-        clip-path: polygon(
-          0 0,
+    }
+
+    .hero {
+      position: relative;
+      min-height: 790px;
+      padding: 34px 28px 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      top: -230px;
+      left: -260px;
+      border-radius: 50%;
+      border: 1px solid #b18a4e33;
+      box-shadow:
+        0 0 0 28px #b18a4e0c,
+        0 0 0 56px #b18a4e08;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: -190px;
+      bottom: 100px;
+      width: 390px;
+      height: 390px;
+      border: 1px solid #9aae8640;
+      border-radius: 50%;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    .brand:after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, var(--line), transparent);
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 27px;
+      height: 27px;
+      place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font: italic 19px var(--serif);
+      letter-spacing: 0;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 72px 0 16px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--green);
+      font: 400 clamp(58px, 16vw, 104px)/0.84 var(--serif);
+      letter-spacing: -0.045em;
+    }
+
+    .hero h1 em {
+      display: block;
+      margin: 14px 0 12px;
+      color: var(--gold);
+      font-size: 0.29em;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-subtitle {
+      position: relative;
+      z-index: 1;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .hero-date {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin: 29px 0 0;
+      padding: 11px 20px;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      color: var(--green);
+    }
+
+    .hero-date strong {
+      font: 400 34px var(--serif);
+    }
+
+    .hero-date small {
+      display: block;
+      color: var(--gold);
+      font: italic 18px var(--serif);
+    }
+
+    .hero-date b {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .hero-date i {
+      height: 32px;
+      border-left: 1px solid var(--gold);
+      opacity: 0.7;
+    }
+
+    .hero-date span {
+      font: 600 15px var(--serif);
+      letter-spacing: 0.08em;
+    }
+
+    .hero-arrow {
+      position: absolute;
+      z-index: 1;
+      bottom: 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero-arrow i {
+      width: 10px;
+      border-radius: 20px;
+      height: 44px;
+      background: linear-gradient(var(--gold), transparent);
+    }
+
+    .photo-section {
+      padding: 0 20px 58px;
+      background: var(--cream);
+    }
+
+    .photo-card {
+      position: relative;
+      height: 530px;
+      overflow: hidden;
+      border-radius: 180px 180px 6px 6px;
+      background: var(--sage);
+    }
+
+    .photo-card:before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      z-index: 2;
+      border: 1px solid #fff9;
+      border-radius: 174px 174px 4px 4px;
+      pointer-events: none;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.82);
+      transition: transform 1s var(--ease);
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .photo-tag {
+      position: absolute;
+      z-index: 3;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 15px;
+      border: 1px solid #fff8;
+      border-radius: 30px;
+      background: #244736df;
+      color: #f5f1e7;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .photo-caption {
+      max-width: 460px;
+      margin: 27px auto 0;
+      text-align: center;
+    }
+
+    .photo-caption h2 {
+      margin: 0;
+      color: var(--green);
+      font: 400 36px/1.05 var(--serif);
+    }
+
+    .photo-caption p {
+      margin: 13px auto 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .wave {
+      height: 58px;
+      margin-top: -1px;
+      background: var(--cream);
+      clip-path: polygon(0 0,
           10% 20%,
           20% 0,
           30% 17%,
@@ -305,814 +343,960 @@
           90% 20%,
           100% 0,
           100% 100%,
-          0 100%
-        );
-      }
-      .band {
-        background: var(--sage);
-        padding: 68px 30px;
-      }
-      .section-kicker {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: var(--gold);
-        font-size: 10px;
-        letter-spacing: 0.21em;
-        text-align: center;
-        text-transform: uppercase;
-      }
-      .section-kicker:before,
-      .section-kicker:after {
-        content: "";
-        width: 30px;
-        height: 1px;
-        background: var(--gold);
-      }
-      .section-title {
-        margin: 15px 0 0;
-        color: var(--green);
-        font: 400 clamp(40px, 10vw, 62px)/0.94 var(--serif);
-        text-align: center;
-      }
-      .section-intro {
-        max-width: 440px;
-        margin: 15px auto 0;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.75;
-        text-align: center;
-      }
-      .event-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        max-width: 490px;
-        margin: 34px auto 0;
-      }
-      .event-card {
-        padding: 23px 15px;
-        border: 1px solid #fff9;
-        border-radius: 16px;
-        background: #fff7;
-        box-shadow: 0 12px 30px #24473608;
-        text-align: center;
-      }
-      .event-card .icon {
-        display: grid;
-        width: 38px;
-        height: 38px;
-        place-items: center;
-        margin: 0 auto 12px;
-        border: 1px solid var(--gold);
-        border-radius: 50%;
-        color: var(--gold);
-        font-size: 18px;
-      }
-      .event-card h3 {
-        margin: 0;
-        color: var(--green);
-        font: 400 23px var(--serif);
-      }
-      .event-card p {
-        margin: 7px 0 0;
-        color: var(--muted);
-        font-size: 11px;
-        line-height: 1.55;
-      }
-      .count-card {
-        max-width: 490px;
-        margin: 12px auto 0;
-        padding: 20px;
-        border: 1px solid #fff9;
-        border-radius: 16px;
-        background: var(--green);
-        color: var(--cream);
-        text-align: center;
-      }
-      .count-card small {
-        color: var(--olive);
-        font-size: 10px;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-      }
-      .units {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 8px;
-        margin-top: 15px;
-      }
-      .unit {
-        padding: 9px 3px;
-        border-right: 1px solid #bcd0b055;
-      }
-      .unit:last-child {
-        border: 0;
-      }
-      .unit b {
-        display: block;
-        color: #f6dfb0;
-        font: 400 31px var(--serif);
-      }
-      .unit span {
-        color: #c4d3c2;
-        font-size: 9px;
-      }
-      .venue {
-        padding: 72px 30px;
-        background: var(--paper);
-        text-align: center;
-      }
-      .venue h2 {
-        max-width: 560px;
-        margin: 15px auto 0;
-        color: var(--green);
-        font: 400 clamp(41px, 10vw, 65px)/0.88 var(--serif);
-      }
-      .venue-sub {
-        margin: 7px 0 0;
-        color: var(--gold);
-        font: italic 25px var(--serif);
-      }
-      .venue-address {
-        max-width: 370px;
-        margin: 22px auto 0;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.8;
-      }
-      .map-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        margin-top: 26px;
-        padding: 12px 18px;
-        border-radius: 30px;
-        background: var(--green);
-        color: #f5f1e7;
-        font-size: 12px;
-        transition:
-          transform 0.2s var(--ease),
-          background 0.2s;
-      }
-      .map-button:hover {
-        transform: translateY(-2px);
-        background: var(--deep);
-      }
-      .rsvp-form {
-        max-width: 440px;
-        margin: 0 auto;
-        text-align: left;
-      }
-      .rsvp-label {
-        display: block;
-        margin: 0 0 8px;
-        color: #e2e8df;
-        font-size: 10px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .rsvp-input {
-        width: 100%;
-        padding: 15px 17px;
-        border: 1px solid #d8bd7866;
-        border-radius: 13px;
-        outline: 0;
-        background: #fffdf51a;
-        color: #fff;
-        font: 400 15px var(--sans);
-      }
-      .rsvp-input::placeholder {
-        color: #d5dfd2a8;
-      }
-      .rsvp-error {
-        display: none;
-        margin-top: 7px;
-        color: #f0bd9d;
-        font-size: 11px;
-      }
-      .rsvp-error.visible {
-        display: block;
-      }
-      .rsvp-input:focus {
-        border-color: var(--gold2);
-        box-shadow: 0 0 0 4px #d8bd7820;
-      }
-      .rsvp-form .rsvp-options {
-        display: grid;
-        gap: 9px;
-        margin-top: 22px;
-      }
-      .rsvp-option {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 13px 14px;
-        border: 1px solid #d8bd7866;
-        border-radius: 13px;
-        background: transparent;
-        color: #f5f1e7;
-        font-size: 13px;
-        transition: 0.2s var(--ease);
-      }
-      .rsvp-option input {
-        width: 18px;
-        height: 18px;
-        accent-color: var(--gold);
-      }
-      .rsvp-option:has(input:checked) {
-        border-color: var(--gold);
-        background: #b18a4e2b;
-      }
-      .submit-rsvp {
-        display: block;
-        width: 100%;
-        margin-top: 18px;
-        padding: 14px 18px;
-        border: 0;
-        border-radius: 14px;
-        background: var(--gold);
-        color: #fff;
-        font-weight: 600;
-      }
-      .export-rsvp {
-        display: none;
-      }
-      .rsvp-success {
-        display: none;
-        margin-top: 20px;
-        padding: 18px;
-        border: 1px solid #d8bd7866;
-        border-radius: 14px;
-        background: #fffdf51a;
-        color: #f5f1e7;
-        font-size: 14px;
-        line-height: 1.7;
-        text-align: center;
-      }
-      .rsvp-success.visible {
-        display: block;
-      }
-      .rsvp-success b {
-        display: block;
-        color: #e2c58b;
-        font-size: 18px;
-      }
-      .reset-rsvp {
-        display: none;
-        margin: 15px auto 0;
-        border: 0;
-        border-bottom: 1px solid var(--gold2);
-        background: transparent;
-        color: #e2c58b;
-        font-size: 11px;
-      }
-      .reset-rsvp.visible {
-        display: block;
-      }
-      .rsvp {
-        position: relative;
-        padding: 70px 27px 76px;
-        background: var(--green);
-        color: var(--cream);
-        text-align: center;
-        overflow: hidden;
-      }
-      .rsvp:before {
-        content: "✦";
-        position: absolute;
-        top: 26px;
-        left: 50%;
-        color: var(--gold);
-        font-size: 20px;
-        transform: translateX(-50%);
-      }
-      .rsvp h2 {
-        margin: 0;
-        color: var(--cream);
-        font: 400 clamp(40px, 10vw, 62px)/0.92 var(--serif);
-      }
-      .rsvp h2 em {
-        display: block;
-        color: #e2c58b;
-        font-style: italic;
-      }
-      .rsvp p {
-        max-width: 400px;
-        margin: 17px auto 25px;
-        color: #c8d2c8;
-        font-size: 13px;
-        line-height: 1.7;
-      }
-      .rsvp-options {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-      .rsvp button {
-        padding: 11px 15px;
-        border: 1px solid #d8bd7880;
-        border-radius: 30px;
-        background: transparent;
-        color: #f5f1e7;
-        font-size: 12px;
-        transition: 0.2s var(--ease);
-      }
-      .rsvp button:hover,
-      .rsvp button.selected {
-        border-color: var(--gold);
-        background: var(--gold);
-        transform: translateY(-2px);
-      }
-      .rsvp-note {
-        min-height: 20px;
-        margin: 18px 0 0;
-        color: #dfd2b2;
-        font-size: 11px;
-      }
-      .hosts {
-        padding: 68px 25px 72px;
-        background: var(--cream);
-        text-align: center;
-      }
-      .hosts h2 {
-        margin: 13px 0 5px;
-        color: var(--green);
-        font: 400 49px var(--serif);
-      }
-      .hosts p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .host-names {
-        margin-top: 17px;
-        color: var(--gold);
-        font: italic 31px var(--serif);
-      }
-      .footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 17px 23px;
-        background: var(--deep);
-        color: #d9e2d6;
-        font-size: 9px;
-        letter-spacing: 0.12em;
-      }
-      .footer b {
-        color: #e2c58b;
-      }
-      .music {
-        position: fixed;
-        z-index: 20;
-        right: 18px;
-        bottom: 18px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 7px 12px 7px 7px;
-        border: 1px solid #d8bd78aa;
-        border-radius: 30px;
-        background: #fffdf5ef;
-        color: var(--green);
-        box-shadow: 0 9px 25px #102f1f33;
-        font-size: 11px;
-      }
-      .music-disc {
-        display: grid;
-        width: 30px;
-        height: 30px;
-        place-items: center;
-        border-radius: 50%;
-        background: var(--gold);
-        color: #fff;
-      }
-      .music.on .music-disc {
-        animation: spin 3.2s linear infinite;
-      }
-      .music:before {
-        content: "";
-        position: absolute;
-        inset: -5px;
-        border: 1px solid #b18a4e55;
-        border-radius: inherit;
-        animation: ring 2.4s ease-out infinite;
-      }
-      .music.on:before {
-        animation: none;
-        opacity: 0;
-      }
-      .bars {
-        display: none;
-        align-items: flex-end;
-        gap: 2px;
-        height: 11px;
-      }
-      .music.on .bars {
-        display: flex;
-      }
-      .bars i {
-        width: 2px;
-        height: 7px;
-        background: var(--gold);
-        animation: bars 0.7s ease-in-out infinite alternate;
-      }
-      .bars i:nth-child(2) {
-        height: 11px;
-        animation-delay: -0.3s;
-      }
-      .bars i:nth-child(3) {
-        height: 8px;
-        animation-delay: -0.15s;
-      }
-      @keyframes ring {
-        0%,
-        45% {
-          opacity: 0;
-          transform: scale(0.88);
-        }
-        60% {
-          opacity: 0.7;
-        }
-        100% {
-          opacity: 0;
-          transform: scale(1.14);
-        }
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes bars {
-        to {
-          transform: scaleY(0.35);
-        }
-      }
-      @media (max-width: 480px) {
-        body {
-          background: var(--paper);
-        }
-        .site {
-          width: 100%;
-          box-shadow: none;
-        }
-        .hero {
-          min-height: 720px;
-        }
-        .photo-card {
-          height: 470px;
-        }
-        .event-grid {
-          gap: 8px;
-        }
-        .event-card {
-          padding: 20px 9px;
-        }
-        .event-card h3 {
-          font-size: 20px;
-        }
-        .band,
-        .venue,
-        .rsvp,
-        .hosts {
-          padding-left: 22px;
-          padding-right: 22px;
-        }
-        .footer {
-          padding-bottom: calc(17px + env(safe-area-inset-bottom));
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.001ms !important;
-          transition-duration: 0.001ms !important;
-          scroll-behavior: auto !important;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="site">
-      <section class="hero">
-        <div class="brand">
-          <span class="brand-mark">Q</span><span>Шақыру билеті</span
-          ><span>2026</span>
-        </div>
-        <div class="eyebrow reveal">Сүндет тойға шақыру</div>
-        <h1 class="reveal delay-1" style="font-size: 44px;">
-          <div class="row-name" style="display: flex;">Лашын, Алинур</div> <em style="font-size: 24px; ">және</em> Аңсар
-        </h1>
-        <p class="hero-subtitle reveal delay-2">
-          Құрметті ағайын-туыс, бауырлар,<br />құда-жекжат, дос-жарандар!
-        </p>
-        <div class="hero-date reveal delay-3">
-          <strong>31</strong>
-          <div><small>қазан</small><b>2026</b></div>
-          <i></i><span>19:00</span>
-        </div>
-        <a class="hero-arrow" href="#story">төмен сырғытыңыз<i></i></a>
-      </section>
-      <section id="story" class="photo-section">
-        <div class="photo-card">
-          <img
-            src="images/image copy.png"
-            alt="Лашын, Алинур және Аңсардың суреті"
-          /><span class="photo-tag">Біздің қуанышымыз</span>
-        </div>
-        <div class="photo-caption">
-          <h2>Ақ дастарханымыздың<br />қадірлі қонағы болыңыздар</h2>
-          <p>
-            Сіздерді ұлдарымыздың сүндет тойына арналған салтанатты кешке шын
-            жүректен шақырамыз.
-          </p>
-        </div>
-      </section>
-      <div class="wave"></div>
-      <section class="band">
-        <div class="section-kicker">Той салтанаты</div>
-        <h2 class="section-title">Кездесетін күн</h2>
-        <p class="section-intro">
-          Жақсы жаңалықпен жүздескенше, қуанышымызды бірге бөлісейік.
-        </p>
-        <div class="event-grid">
-          <div class="event-card">
-            <div class="icon">◷</div>
-            <h3>31 қазан</h3>
-            <p>Сенбі, 2026 жыл<br />Тойдың басталуы 19:00</p>
-          </div>
-          <div class="event-card">
-            <div class="icon">✦</div>
-            <h3>Қазан</h3>
-            <p>Күздің ең шуақты<br />кешінде бас қосамыз</p>
-          </div>
-        </div>
-        <div class="count-card">
-          <small>Тойға дейін</small>
-          <div class="units">
-            <div class="unit"><b id="days">00</b><span>күн</span></div>
-            <div class="unit"><b id="hours">00</b><span>сағат</span></div>
-            <div class="unit"><b id="minutes">00</b><span>минут</span></div>
-            <div class="unit"><b id="seconds">00</b><span>секунд</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="venue">
-        <div class="section-kicker">Мекен-жайымыз</div>
-        <h2>Ұлы жібек жолы</h2>
-        <div class="venue-sub">салтанат сарайы</div>
-        <p class="venue-address">
-          Түркістан облысы
-        </p>
-        <a
-          class="map-button"
-          href="https://2gis.kz/kz_turkistan_oblast_rwop/geo/70030076442104503/69.341524,41.497484"
-          target="_blank"
-          rel="noreferrer"
-          ><img src="images/2gis.png" alt="2gis" style="width: 30px; height: 30px; border-radius: 10px;">&nbsp; Картаға өту &nbsp;</a
-        >
-      </section>
-      <section class="rsvp" id="rsvp">
-        <h2>Қуанышымыздың<br /><em>қонағы болыңыздар</em></h2>
-        <p id="formadek">Тойға келуіңізді алдын ала растауыңызды сұраймыз.</p>
-        <form class="rsvp-form" id="rsvp-form">
-          <label class="rsvp-label" for="guest-name"
-            >Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімін бірге
-            жазыңыз)</label
-          ><input
-            class="rsvp-input"
-            id="guest-name"
-            name="name"
-            placeholder="Есіміңіз"
-            autocomplete="name"
-          />
-          <div class="rsvp-error" id="name-error">Аты-жөніңізді жазыңыз.</div>
-          <div class="rsvp-options" id="attendance-options">
-            <label class="rsvp-option"
-              ><input
-                type="radio"
-                name="attendance"
-                value="Келемін"
-                required
-              /><span>Келемін</span></label
-            ><label class="rsvp-option"f
-              ><input
-                type="radio"
-                name="attendance"
-                value="Жұбыммен келемін"
-              /><span>Жұбыммен келемін</span></label
-            ><label class="rsvp-option"
-              ><input
-                type="radio"
-                name="attendance"
-                value="Өкінішке орай қатыса алмаймын"
-              /><span>Өкінішке орай қатыса алмаймын</span></label
-            >
-          </div>
-          <div class="rsvp-error" id="attendance-error">
-            Тойға қатысуыңызды таңдаңыз.
-          </div>
-          <button class="submit-rsvp" type="submit">Жіберу</button>
-        </form>
-        <!-- <div class="rsvp-note" id="rsvp-note"></div> -->
-        <div class="rsvp-success" id="rsvp-success"></div>
-        <button class="reset-rsvp" id="reset-rsvp" type="button">
-          Форманы қайта толтыру
-        </button>
-      </section>
-      <section class="hosts">
-        <div class="section-kicker">Той иелері</div>
-        <h2 style="font-size: 36px;">Серік - Ботакөз</h2>
-        <p>Ізгі ниетпен, той иелері</p>
-        <div class="host-names">Қуанышымызға ортақ болыңыздар</div>
-      </section>
-      <footer class="footer">
-        <span>СҮНДЕТ ТОЙ · 31.10.2026</span><span>ЖАСАҒАН <b>JOBALAB</b></span>
-      </footer>
-    </div>
-    <button class="music" id="music" aria-pressed="false">
-      <span class="music-disc" id="disc"><img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;"></span
-      ><span id="music-label">Әуен</span
-      ><span class="bars"><i></i><i></i><i></i></span>
-    </button>
-    <script>
-      const target = new Date("2026-10-31T19:00:00+05:00").getTime();
-      function tick() {
-        const n = Math.max(0, target - Date.now()),
-          v = [
-            Math.floor(n / 864e5),
-            Math.floor(n / 36e5) % 24,
-            Math.floor(n / 6e4) % 60,
-            Math.floor(n / 1e3) % 60,
-          ];
-        ["days", "hours", "minutes", "seconds"].forEach(
-          (id, i) =>
-            (document.getElementById(id).textContent = String(v[i]).padStart(
-              2,
-              "0",
-            )),
-        );
-      }
-      tick();
-      setInterval(tick, 1000);
-      const RSVP_ENDPOINT =
-        "https://script.google.com/macros/s/AKfycbzkPztlMaRQfFJViRV6U0mRIAJJUy7WFaI7s91B4dyHMzj2dNFVD2gfeGZSeyICUruf/exec";
-      const MUSIC_URL = "/music/toi.mp3";
-      const rsvpForm = document.getElementById("rsvp-form");
-      const rsvpNote = document.getElementById("rsvp-note");
-      const rsvpSuccess = document.getElementById("rsvp-success");
-      const resetRsvp = document.getElementById("reset-rsvp");
-      const submitRsvp = rsvpForm.querySelector(".submit-rsvp");
-      function getSavedResponse() {
-        return JSON.parse(localStorage.getItem("toi-rsvp-submitted") || "null");
-      }
-      function showSavedResponse(response) {
-        rsvpForm.style.display = "none";
-        rsvpSuccess.innerHTML =
-          "<b>Жауабыңыз қабылданды!</b>" +
-          response.name +
-          "<br>" +
-          response.attendance;
-        rsvpSuccess.classList.add("visible");
-        resetRsvp.classList.add("visible");
-      }
-      function clearSavedResponse() {
-        localStorage.removeItem("toi-rsvp-submitted");
-        rsvpForm.reset();
-        rsvpForm.style.display = "block";
-        submitRsvp.disabled = false;
-        submitRsvp.textContent = "Жіберу";
-        rsvpSuccess.classList.remove("visible");
-        resetRsvp.classList.remove("visible");
-        rsvpNote.textContent = "";
-      }
-      const savedResponse = getSavedResponse();
-      if (savedResponse) showSavedResponse(savedResponse);
-      resetRsvp.onclick = clearSavedResponse;
-      rsvpForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const nameInput = document.getElementById("guest-name"),
-          nameError = document.getElementById("name-error"),
-          attendanceError = document.getElementById("attendance-error");
-        const name = nameInput.value.trim(),
-          attendance = rsvpForm.querySelector("input[name=attendance]:checked");
-        nameError.classList.toggle("visible", !name);
-        attendanceError.classList.toggle("visible", !attendance);
-        if (!name) {
-          nameInput.focus();
-          rsvpNote.textContent = "Аты-жөніңізді жазып жіберіңіз.";
-          return;
-        }
-        if (!attendance) {
-          rsvpNote.textContent = "Тойға қатысу нұсқасын таңдаңыз.";
-          return;
-        }
-        const response = {
-          date: new Date().toLocaleString("kk-KZ"),
-          name,
-          attendance: attendance.value,
-        };
-        
-        submitRsvp.disabled = true;
-        submitRsvp.textContent = "Жіберілуде…";
-        try {
-          if (RSVP_ENDPOINT) {
-            const payload = new Blob([JSON.stringify(response)], {
-              type: "text/plain;charset=UTF-8",
-            });
-            if (!navigator.sendBeacon(RSVP_ENDPOINT, payload)) {
-              fetch(RSVP_ENDPOINT, {
-                method: "POST",
-                body: payload,
-                mode: "no-cors",
-                keepalive: true,
-              }).catch(() => {});
-            }
-          }
-          const formadeki = document.getElementById("formadek");
-          localStorage.setItem("toi-rsvp-submitted", JSON.stringify(response));
-          submitRsvp.textContent = "Жіберілді ✓";
-          // rsvpNote.textContent = "Жауабыңыз сақталды, Рақмет!";
-          formadeki.textContent = "Жауабыңыз сақталды, Рақмет!";
-          
+          0 100%);
+    }
 
-          showSavedResponse(response);
-        } catch (_) {
-          submitRsvp.textContent = "Жіберілді ✓";
-          rsvpNote.textContent = "Жауабыңыз қабылданды.";
-          showSavedResponse(response);
-        }
-      });
-      let ctx = null,
-        timer = null,
-        playing = false,
-        audio = null;
-      function note() {
-        if (!ctx) return;
-        const o = ctx.createOscillator(),
-          g = ctx.createGain(),
-          t = ctx.currentTime;
-        o.type = "sine";
-        o.frequency.setValueAtTime(392, t);
-        o.frequency.exponentialRampToValueAtTime(523, t + 0.7);
-        g.gain.setValueAtTime(0.0001, t);
-        g.gain.exponentialRampToValueAtTime(0.04, t + 0.05);
-        g.gain.exponentialRampToValueAtTime(0.0001, t + 1.5);
-        o.connect(g).connect(ctx.destination);
-        o.start();
-        o.stop(t + 1.6);
+    .band {
+      background: var(--sage);
+      padding: 68px 30px;
+    }
+
+    .section-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 0.21em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-kicker:before,
+    .section-kicker:after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      margin: 15px 0 0;
+      color: var(--green);
+      font: 400 clamp(40px, 10vw, 62px)/0.94 var(--serif);
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 440px;
+      margin: 15px auto 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 490px;
+      margin: 34px auto 0;
+    }
+
+    .event-card {
+      padding: 23px 15px;
+      border: 1px solid #fff9;
+      border-radius: 16px;
+      background: #fff7;
+      box-shadow: 0 12px 30px #24473608;
+      text-align: center;
+    }
+
+    .event-card .icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      margin: 0 auto 12px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .event-card h3 {
+      margin: 0;
+      color: var(--green);
+      font: 400 23px var(--serif);
+    }
+
+    .event-card p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .count-card {
+      max-width: 490px;
+      margin: 12px auto 0;
+      padding: 20px;
+      border: 1px solid #fff9;
+      border-radius: 16px;
+      background: var(--green);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .count-card small {
+      color: var(--olive);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .units {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .unit {
+      padding: 9px 3px;
+      border-right: 1px solid #bcd0b055;
+    }
+
+    .unit:last-child {
+      border: 0;
+    }
+
+    .unit b {
+      display: block;
+      color: #f6dfb0;
+      font: 400 31px var(--serif);
+    }
+
+    .unit span {
+      color: #c4d3c2;
+      font-size: 9px;
+    }
+
+    .venue {
+      padding: 72px 30px;
+      background: var(--paper);
+      text-align: center;
+    }
+
+    .venue h2 {
+      max-width: 560px;
+      margin: 15px auto 0;
+      color: var(--green);
+      font: 400 clamp(41px, 10vw, 65px)/0.88 var(--serif);
+    }
+
+    .venue-sub {
+      margin: 7px 0 0;
+      color: var(--gold);
+      font: italic 25px var(--serif);
+    }
+
+    .venue-address {
+      max-width: 370px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .map-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 26px;
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: var(--green);
+      color: #f5f1e7;
+      font-size: 12px;
+      transition:
+        transform 0.2s var(--ease),
+        background 0.2s;
+    }
+
+    .map-button:hover {
+      transform: translateY(-2px);
+      background: var(--deep);
+    }
+
+    .rsvp-form {
+      max-width: 440px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .rsvp-label {
+      display: block;
+      margin: 0 0 8px;
+      color: #e2e8df;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .rsvp-input {
+      width: 100%;
+      padding: 15px 17px;
+      border: 1px solid #d8bd7866;
+      border-radius: 13px;
+      outline: 0;
+      background: #fffdf51a;
+      color: #fff;
+      font: 400 15px var(--sans);
+    }
+
+    .rsvp-input::placeholder {
+      color: #d5dfd2a8;
+    }
+
+    .rsvp-error {
+      display: none;
+      margin-top: 7px;
+      color: #f0bd9d;
+      font-size: 11px;
+    }
+
+    .rsvp-error.visible {
+      display: block;
+    }
+
+    .rsvp-input:focus {
+      border-color: var(--gold2);
+      box-shadow: 0 0 0 4px #d8bd7820;
+    }
+
+    .rsvp-form .rsvp-options {
+      display: grid;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .rsvp-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 14px;
+      border: 1px solid #d8bd7866;
+      border-radius: 13px;
+      background: transparent;
+      color: #f5f1e7;
+      font-size: 13px;
+      transition: 0.2s var(--ease);
+    }
+
+    .rsvp-option input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+    }
+
+    .rsvp-option:has(input:checked) {
+      border-color: var(--gold);
+      background: #b18a4e2b;
+    }
+
+    .submit-rsvp {
+      display: block;
+      width: 100%;
+      margin-top: 18px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--gold);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .export-rsvp {
+      display: none;
+    }
+
+    .rsvp-success {
+      display: none;
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid #d8bd7866;
+      border-radius: 14px;
+      background: #fffdf51a;
+      color: #f5f1e7;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .rsvp-success.visible {
+      display: block;
+    }
+
+    .rsvp-success b {
+      display: block;
+      color: #e2c58b;
+      font-size: 18px;
+    }
+
+    .reset-rsvp {
+      display: none;
+      margin: 15px auto 0;
+      border: 0;
+      border-bottom: 1px solid var(--gold2);
+      background: transparent;
+      color: #e2c58b;
+      font-size: 11px;
+    }
+
+    .reset-rsvp.visible {
+      display: block;
+    }
+
+    .rsvp {
+      position: relative;
+      padding: 70px 27px 76px;
+      background: var(--green);
+      color: var(--cream);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .rsvp:before {
+      content: "✦";
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      color: var(--gold);
+      font-size: 20px;
+      transform: translateX(-50%);
+    }
+
+    .rsvp h2 {
+      margin: 0;
+      color: var(--cream);
+      font: 400 clamp(40px, 10vw, 62px)/0.92 var(--serif);
+    }
+
+    .rsvp h2 em {
+      display: block;
+      color: #e2c58b;
+      font-style: italic;
+    }
+
+    .rsvp p {
+      max-width: 400px;
+      margin: 17px auto 25px;
+      color: #c8d2c8;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .rsvp-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .rsvp button {
+      padding: 11px 15px;
+      border: 1px solid #d8bd7880;
+      border-radius: 30px;
+      background: transparent;
+      color: #f5f1e7;
+      font-size: 12px;
+      transition: 0.2s var(--ease);
+    }
+
+    .rsvp button:hover,
+    .rsvp button.selected {
+      border-color: var(--gold);
+      background: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .rsvp-note {
+      min-height: 20px;
+      margin: 18px 0 0;
+      color: #dfd2b2;
+      font-size: 11px;
+    }
+
+    .hosts {
+      padding: 68px 25px 72px;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .hosts h2 {
+      margin: 13px 0 5px;
+      color: var(--green);
+      font: 400 49px var(--serif);
+    }
+
+    .hosts p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .host-names {
+      margin-top: 17px;
+      color: var(--gold);
+      font: italic 31px var(--serif);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 17px 23px;
+      background: var(--deep);
+      color: #d9e2d6;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+    .footer b {
+      color: #e2c58b;
+    }
+
+    .music {
+      position: fixed;
+      z-index: 20;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px 7px 7px;
+      border: 1px solid #d8bd78aa;
+      border-radius: 30px;
+      background: #fffdf5ef;
+      color: var(--green);
+      box-shadow: 0 9px 25px #102f1f33;
+      font-size: 11px;
+    }
+
+    .music-disc {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .music.on .music-disc {
+      animation: spin 3.2s linear infinite;
+    }
+
+    .music:before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border: 1px solid #b18a4e55;
+      border-radius: inherit;
+      animation: ring 2.4s ease-out infinite;
+    }
+
+    .music.on:before {
+      animation: none;
+      opacity: 0;
+    }
+
+    .bars {
+      display: none;
+      align-items: flex-end;
+      gap: 2px;
+      height: 11px;
+    }
+
+    .music.on .bars {
+      display: flex;
+    }
+
+    .bars i {
+      width: 2px;
+      height: 7px;
+      background: var(--gold);
+      animation: bars 0.7s ease-in-out infinite alternate;
+    }
+
+    .bars i:nth-child(2) {
+      height: 11px;
+      animation-delay: -0.3s;
+    }
+
+    .bars i:nth-child(3) {
+      height: 8px;
+      animation-delay: -0.15s;
+    }
+
+    @keyframes ring {
+
+      0%,
+      45% {
+        opacity: 0;
+        transform: scale(0.88);
       }
-      async function start() {
-        if (MUSIC_URL) {
-          try {
-            audio ??= new Audio(encodeURI(MUSIC_URL));
-            audio.loop = true;
-            audio.volume = 0.7;
-            await audio.play();
-          } catch (_) {
-            audio = null;
+
+      60% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.14);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes bars {
+      to {
+        transform: scaleY(0.35);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background: var(--paper);
+      }
+
+      .site {
+        width: 100%;
+        box-shadow: none;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .photo-card {
+        height: 470px;
+      }
+
+      .event-grid {
+        gap: 8px;
+      }
+
+      .event-card {
+        padding: 20px 9px;
+      }
+
+      .event-card h3 {
+        font-size: 20px;
+      }
+
+      .band,
+      .venue,
+      .rsvp,
+      .hosts {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .footer {
+        padding-bottom: calc(17px + env(safe-area-inset-bottom));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+    <section class="hero">
+      <div class="brand">
+        <span class="brand-mark">Q</span><span>Шақыру билеті</span><span>2026</span>
+      </div>
+      <div class="eyebrow reveal">Сүндет тойға шақыру</div>
+      <h1 class="reveal delay-1" style="font-size: 44px;">
+        <div class="row-name" style="display: flex;">Лашын, Алинур</div> <em style="font-size: 24px; ">және</em> Аңсар
+      </h1>
+      <p class="hero-subtitle reveal delay-2">
+        Құрметті ағайын-туыс, бауырлар,<br />құда-жекжат, дос-жарандар!
+      </p>
+      <div class="hero-date reveal delay-3">
+        <strong>31</strong>
+        <div><small>қазан</small><b>2026</b></div>
+        <i></i><span>19:00</span>
+      </div>
+      <a class="hero-arrow" href="#story">төмен сырғытыңыз<i></i></a>
+    </section>
+    <section id="story" class="photo-section">
+      <div class="photo-card">
+        <img src="images/image copy.png" alt="Лашын, Алинур және Аңсардың суреті" /><span class="photo-tag">Біздің
+          қуанышымыз</span>
+      </div>
+      <div class="photo-caption">
+        <h2>Ақ дастарханымыздың<br />қадірлі қонағы болыңыздар</h2>
+        <p>
+          Сіздерді ұлдарымыздың сүндет тойына арналған салтанатты кешке шын
+          жүректен шақырамыз.
+        </p>
+      </div>
+    </section>
+    <div class="wave"></div>
+    <section class="band">
+      <div class="section-kicker">Той салтанаты</div>
+      <h2 class="section-title">Кездесетін күн</h2>
+      <p class="section-intro">
+        Жақсы жаңалықпен жүздескенше, қуанышымызды бірге бөлісейік.
+      </p>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="icon">◷</div>
+          <h3>31 қазан</h3>
+          <p>Сенбі, 2026 жыл<br />Тойдың басталуы 19:00</p>
+        </div>
+        <div class="event-card">
+          <div class="icon">✦</div>
+          <h3>Қазан</h3>
+          <p>Күздің ең шуақты<br />кешінде бас қосамыз</p>
+        </div>
+      </div>
+      <div class="count-card">
+        <small>Тойға дейін</small>
+        <div class="units">
+          <div class="unit"><b id="days">00</b><span>күн</span></div>
+          <div class="unit"><b id="hours">00</b><span>сағат</span></div>
+          <div class="unit"><b id="minutes">00</b><span>минут</span></div>
+          <div class="unit"><b id="seconds">00</b><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="venue">
+      <div class="section-kicker">Мекен-жайымыз</div>
+      <h2>Ұлы жібек жолы</h2>
+      <div class="venue-sub">салтанат сарайы</div>
+      <p class="venue-address">
+        Түркістан облысы
+      </p>
+      <a class="map-button" href="https://2gis.kz/kz_turkistan_oblast_rwop/geo/70030076442104503/69.341524,41.497484"
+        target="_blank" rel="noreferrer"><img src="images/2gis.png" alt="2gis"
+          style="width: 30px; height: 30px; border-radius: 10px;">&nbsp; Картаға өту &nbsp;</a>
+    </section>
+    <section class="rsvp" id="rsvp">
+      <h2>Қуанышымыздың<br /><em>қонағы болыңыздар</em></h2>
+      <p id="formadek">Тойға келуіңізді алдын ала растауыңызды сұраймыз.</p>
+      <form class="rsvp-form" id="rsvp-form">
+        <label class="rsvp-label" for="guest-name">Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімін бірге
+          жазыңыз)</label><input class="rsvp-input" id="guest-name" name="name" placeholder="Есіміңіз"
+          autocomplete="name" />
+        <div class="rsvp-error" id="name-error">Аты-жөніңізді жазыңыз.</div>
+        <div class="rsvp-options" id="attendance-options">
+          <label class="rsvp-option"><input type="radio" name="attendance" value="Келемін"
+              required /><span>Келемін</span></label><label class="rsvp-option" f><input type="radio" name="attendance"
+              value="Жұбыммен келемін" /><span>Жұбыммен келемін</span></label><label class="rsvp-option"><input
+              type="radio" name="attendance" value="Өкінішке орай қатыса алмаймын" /><span>Өкінішке орай қатыса
+              алмаймын</span></label>
+        </div>
+        <div class="rsvp-error" id="attendance-error">
+          Тойға қатысуыңызды таңдаңыз.
+        </div>
+        <button class="submit-rsvp" type="submit">Жіберу</button>
+      </form>
+      <!-- <div class="rsvp-note" id="rsvp-note"></div> -->
+      <div class="rsvp-success" id="rsvp-success"></div>
+      <button class="reset-rsvp" id="reset-rsvp" type="button">
+        Форманы қайта толтыру
+      </button>
+    </section>
+    <section class="hosts">
+      <div class="section-kicker">Той иелері</div>
+      <h2 style="font-size: 36px;">Серік - Ботакөз</h2>
+      <p>Ізгі ниетпен, той иелері</p>
+      <div class="host-names">Қуанышымызға ортақ болыңыздар</div>
+    </section>
+    <footer class="footer">
+      <span>СҮНДЕТ ТОЙ · 31.10.2026</span><span>ЖАСАҒАН <b>JOBALAB</b></span>
+    </footer>
+  </div>
+  <button class="music" id="music" aria-pressed="false">
+    <span class="music-disc" id="disc"><img src="images/image copy 3.png" alt="img"
+        style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;"></span><span
+      id="music-label">Әуен</span><span class="bars"><i></i><i></i><i></i></span>
+  </button>
+  <script>
+    const target = new Date("2026-10-31T19:00:00+05:00").getTime();
+    function tick() {
+      const n = Math.max(0, target - Date.now()),
+        v = [
+          Math.floor(n / 864e5),
+          Math.floor(n / 36e5) % 24,
+          Math.floor(n / 6e4) % 60,
+          Math.floor(n / 1e3) % 60,
+        ];
+      ["days", "hours", "minutes", "seconds"].forEach(
+        (id, i) =>
+        (document.getElementById(id).textContent = String(v[i]).padStart(
+          2,
+          "0",
+        )),
+      );
+    }
+    tick();
+    setInterval(tick, 1000);
+    const RSVP_ENDPOINT =
+      "https://script.google.com/macros/s/AKfycbzkPztlMaRQfFJViRV6U0mRIAJJUy7WFaI7s91B4dyHMzj2dNFVD2gfeGZSeyICUruf/exec";
+    const MUSIC_URL = "/music/toi.mp3";
+    const rsvpForm = document.getElementById("rsvp-form");
+    const rsvpNote = document.getElementById("rsvp-note");
+    const rsvpSuccess = document.getElementById("rsvp-success");
+    const resetRsvp = document.getElementById("reset-rsvp");
+    const submitRsvp = rsvpForm.querySelector(".submit-rsvp");
+    function getSavedResponse() {
+      return JSON.parse(localStorage.getItem("toi-rsvp-submitted") || "null");
+    };
+
+
+    let audio = null;
+    let isPlaying = false;
+
+    function setMusicState(playing) {
+      isPlaying = playing;
+
+      const musicButton = document.getElementById("music");
+      const disc = document.getElementById("disc");
+      const label = document.getElementById("music-label");
+
+      if (playing) {
+        musicButton.classList.add("on");
+        musicButton.setAttribute("aria-pressed", "true");
+        disc.textContent = "Ⅱ";
+        label.textContent = "Әуен қосулы";
+      } else {
+        musicButton.classList.remove("on");
+        musicButton.setAttribute("aria-pressed", "false");
+        disc.textContent = "▶";
+        label.textContent = "Әуен";
+      }
+    }
+
+    async function startMusic() {
+      try {
+        if (!audio) {
+          audio = new Audio(MUSIC_URL);
+          audio.loop = true;
+          audio.volume = 0.7;
+          audio.preload = "auto";
+        }
+
+        await audio.play();
+
+        localStorage.setItem("toi-music-enabled", "true");
+        setMusicState(true);
+      } catch (error) {
+        // Браузер автоматты дыбысты бұғаттады.
+        // Бірінші touch/click кезінде қайта қосылады.
+        setMusicState(false);
+      }
+    }
+
+    function stopMusic() {
+      if (!audio) return;
+
+      audio.pause();
+      setMusicState(false);
+      localStorage.setItem("toi-music-enabled", "false");
+    }
+
+    document.getElementById("music").addEventListener("click", () => {
+      if (isPlaying) {
+        stopMusic();
+      } else {
+        startMusic();
+      }
+    });
+
+    // Сайт ашылғанда автоматты қосылуға әрекет жасайды
+    window.addEventListener("load", () => {
+      if (localStorage.getItem("toi-music-enabled") !== "false") {
+        startMusic();
+      }
+    });
+
+    // iPhone/Safari үшін бірінші әрекеттен кейін қосылады
+    function enableMusicAfterGesture() {
+      if (!isPlaying) {
+        startMusic();
+      }
+
+      window.removeEventListener("touchstart", enableMusicAfterGesture);
+      window.removeEventListener("pointerdown", enableMusicAfterGesture);
+      window.removeEventListener("click", enableMusicAfterGesture);
+    }
+
+    window.addEventListener("touchstart", enableMusicAfterGesture, {
+      once: true,
+      passive: true
+    });
+
+    window.addEventListener("pointerdown", enableMusicAfterGesture, {
+      once: true
+    });
+
+    window.addEventListener("click", enableMusicAfterGesture, {
+      once: true
+    });
+
+    function showSavedResponse(response) {
+      rsvpForm.style.display = "none";
+      rsvpSuccess.innerHTML =
+        "<b>Жауабыңыз қабылданды!</b>" +
+        response.name +
+        "<br>" +
+        response.attendance;
+      rsvpSuccess.classList.add("visible");
+      resetRsvp.classList.add("visible");
+    }
+    function clearSavedResponse() {
+      localStorage.removeItem("toi-rsvp-submitted");
+      rsvpForm.reset();
+      rsvpForm.style.display = "block";
+      submitRsvp.disabled = false;
+      submitRsvp.textContent = "Жіберу";
+      rsvpSuccess.classList.remove("visible");
+      resetRsvp.classList.remove("visible");
+      rsvpNote.textContent = "";
+    }
+    const savedResponse = getSavedResponse();
+    if (savedResponse) showSavedResponse(savedResponse);
+    resetRsvp.onclick = clearSavedResponse;
+    rsvpForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById("guest-name"),
+        nameError = document.getElementById("name-error"),
+        attendanceError = document.getElementById("attendance-error");
+      const name = nameInput.value.trim(),
+        attendance = rsvpForm.querySelector("input[name=attendance]:checked");
+      nameError.classList.toggle("visible", !name);
+      attendanceError.classList.toggle("visible", !attendance);
+      if (!name) {
+        nameInput.focus();
+        rsvpNote.textContent = "Аты-жөніңізді жазып жіберіңіз.";
+        return;
+      }
+      if (!attendance) {
+        rsvpNote.textContent = "Тойға қатысу нұсқасын таңдаңыз.";
+        return;
+      }
+      const response = {
+        date: new Date().toLocaleString("kk-KZ"),
+        name,
+        attendance: attendance.value,
+      };
+
+      submitRsvp.disabled = true;
+      submitRsvp.textContent = "Жіберілуде…";
+      try {
+        if (RSVP_ENDPOINT) {
+          const payload = new Blob([JSON.stringify(response)], {
+            type: "text/plain;charset=UTF-8",
+          });
+          if (!navigator.sendBeacon(RSVP_ENDPOINT, payload)) {
+            fetch(RSVP_ENDPOINT, {
+              method: "POST",
+              body: payload,
+              mode: "no-cors",
+              keepalive: true,
+            }).catch(() => { });
           }
         }
-        if (!audio) {
-          const C = window.AudioContext || window.webkitAudioContext;
-          if (!C) return;
-          ctx ??= new C();
-          await ctx.resume();
-          if (ctx.state !== "running") return;
-          note();
-          timer ??= setInterval(note, 2200);
+        const formadeki = document.getElementById("formadek");
+        localStorage.setItem("toi-rsvp-submitted", JSON.stringify(response));
+        submitRsvp.textContent = "Жіберілді ✓";
+        // rsvpNote.textContent = "Жауабыңыз сақталды, Рақмет!";
+        formadeki.textContent = "Жауабыңыз сақталды, Рақмет!";
+
+
+        showSavedResponse(response);
+      } catch (_) {
+        submitRsvp.textContent = "Жіберілді ✓";
+        rsvpNote.textContent = "Жауабыңыз қабылданды.";
+        showSavedResponse(response);
+      }
+    });
+    let ctx = null,
+      timer = null,
+      playing = false
+    function note() {
+      if (!ctx) return;
+      const o = ctx.createOscillator(),
+        g = ctx.createGain(),
+        t = ctx.currentTime;
+      o.type = "sine";
+      o.frequency.setValueAtTime(392, t);
+      o.frequency.exponentialRampToValueAtTime(523, t + 0.7);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.04, t + 0.05);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 1.5);
+      o.connect(g).connect(ctx.destination);
+      o.start();
+      o.stop(t + 1.6);
+    }
+    async function start() {
+      if (MUSIC_URL) {
+        try {
+          audio ??= new Audio(encodeURI(MUSIC_URL));
+          audio.loop = true;
+          audio.volume = 0.7;
+          await audio.play();
+        } catch (_) {
+          audio = null;
         }
-        playing = true;
-        document.getElementById("music").classList.add("on");
-        document.getElementById("music").setAttribute("aria-pressed", "true");
-        document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
-        document.getElementById("music-label").textContent = "Әуен қосулы";
       }
-      function stop() {
-        clearInterval(timer);
-        timer = null;
-        if (audio) audio.pause();
-        playing = false;
-        document.getElementById("music").classList.remove("on");
-        document.getElementById("music").setAttribute("aria-pressed", "false");
-        document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
-        document.getElementById("music-label").textContent = "Әуен";
+      if (!audio) {
+        const C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return;
+        ctx ??= new C();
+        await ctx.resume();
+        if (ctx.state !== "running") return;
+        note();
+        timer ??= setInterval(note, 2200);
       }
-      document.getElementById("music").onclick = () =>
-        playing ? stop() : start();
-      window.addEventListener("load", () => start().catch(() => {}));
-      window.addEventListener(
-        "pointerdown",
-        () => {
-          if (!playing) start().catch(() => {});
-        },
-        { once: true },
-      );
-    </script>
-  </body>
+      playing = true;
+      document.getElementById("music").classList.add("on");
+      document.getElementById("music").setAttribute("aria-pressed", "true");
+      document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
+      document.getElementById("music-label").textContent = "Әуен қосулы";
+    }
+    function stop() {
+      clearInterval(timer);
+      timer = null;
+      if (audio) audio.pause();
+      playing = false;
+      document.getElementById("music").classList.remove("on");
+      document.getElementById("music").setAttribute("aria-pressed", "false");
+      document.getElementById("disc").innerHTML = '<img src="images/image copy 3.png" alt="img" style="width: 30px; height: 30px; border-radius: 100px; object-fit: cover;">';
+      document.getElementById("music-label").textContent = "Әуен";
+    }
+    document.getElementById("music").onclick = () =>
+      playing ? stop() : start();
+    window.addEventListener("load", () => start().catch(() => { }));
+    window.addEventListener(
+      "pointerdown",
+      () => {
+        if (!playing) start().catch(() => { });
+      },
+      { once: true },
+    );
+  </script>
+</body>
+
 </html>
